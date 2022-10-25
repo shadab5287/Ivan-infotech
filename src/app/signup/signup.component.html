@@ -1,0 +1,181 @@
+<section class="vh-120" style="background-color: #9A616D;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-8">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0">
+                        <div class="col-md-12 d-flex align-items-center">
+                            <div class="card-body text-black">
+                                <!-- <h1>formControlName="password"</h1> -->
+
+                                <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" *ngIf="signUp==true">
+
+                                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign up</h3>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput1">User Name</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                                    name="text" formControlName="username">
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('username').touched && signUpForm.get('username').hasError('required')">Username required.</span>
+
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput2">First Name</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput2"
+                                                    name="email" formControlName="first_name">
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('first_name').touched && signUpForm.get('first_name').hasError('required')">
+                                                   First Name required.</span>
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('first_name').touched && signUpForm.get('first_name').hasError('minlength')">
+                                                   Minimum 3 chracter required</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput3">Last Name</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput3"
+                                                    name="email" formControlName="last_name">
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('last_name').touched && signUpForm.get('last_name').hasError('required')">
+                                                   Last Name required.</span>
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('last_name').touched && signUpForm.get('last_name').hasError('minlength')">
+                                                    Minimum 3 chracter required</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect3">Select role</label>
+                                                <select class="form-control" formControlName="role"
+                                                    id="exampleFormControlSelect3">
+                                                    <option>artist</option>
+                                                    <option>customer</option>
+                                                    <option>photographer</option>
+
+                                                </select>
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('role').touched && signUpForm.get('role').hasError('required')">Role
+                                                    required.</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput11">Email address</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput4"
+                                                    name="email" formControlName="email">
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('email').touched && signUpForm.get('email').hasError('required')">Email
+                                                    required.</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput7">Password</label>
+                                                <input type="password" class="form-control"
+                                                    id="exampleFormControlInput7" name="password"
+                                                    formControlName="password">
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('password').touched && signUpForm.get('password').hasError('required')">Password
+                                                    required.</span>
+                                                <span style="color: red;"
+                                                    *ngIf="signUpForm.get('password').touched && signUpForm.get('password').hasError('minlength')"> Minimum 8 chracter required
+                                                    </span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlInput5">Confirm password</label>
+                                                <input type="password" class="form-control"
+                                                    id="exampleFormControlInput5" name="password"
+                                                    formControlName="password_confirmation">
+
+                                                <span style="color: red;"
+                                                    *ngIf="f.password_confirmation.touched && f.password_confirmation.invalid">
+                                                    Password and Confirm Password must be match.
+                                                    <!-- <div *ngIf="f.confirmpassword.errors.ConfirmedValidator"></div> -->
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+
+                                    <div class="pt-1 mb-4">
+                                        <button type="submit" [disabled]="signUpForm.invalid"
+                                            class="btn btn-info btn-lg btn-block">Sign Up</button>
+                                    </div>
+
+
+                                    <p> Have an account? <a [routerLink]="['/login']" class="link-info">Login here</a>
+                                    </p>
+
+                                </form>
+                                <form [formGroup]="otpForm" (ngSubmit)="onOTPSubmit()" *ngIf="signUp==false">
+
+                                    <h3 class="fw-normal mb-3 pb-3"  style="letter-spacing: 1px;">OTP</h3>
+                                    <div style="height: 60vh;">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlInput1">Enter OTP</label>
+                                                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                                                        name="text" formControlName="otp_code">
+                                                </div>
+                                            </div>
+    
+                                        </div>
+    
+    
+                                        <div class="pt-1 mb-4">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <button type="button" 
+                                                    class="btn btn-secondry btn-lg btn-block" (click)="resendOTP()">Resend OTP</button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button type="submit" [disabled]="otpForm.invalid"
+                                                    class="btn btn-info btn-lg btn-block">Submit</button>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <p> Have an account? <a [routerLink]="['/login']" class="link-info">Login here</a>
+                                    </p>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,145 @@
+.header {
+    z-index: 100000;
+    
+    
+    position: fixed;
+    width: 100%;
+    // background: aquamarine;
+}
+.logo div {
+    /* Layout Properties */
+top: 5px;
+left: 20px;
+width: 260px;
+height: 80px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+background-color: white;
+margin: 10px;
+width: 260px;
+
+}
+.logo div h1 {
+    /* Layout Properties */
+
+text-align: left;
+font: normal normal normal 32px/44px Mongolian Baiti;
+letter-spacing: 0px;
+color: #101010;
+opacity: 1;
+}
+.side{
+    /* Layout Properties */
+top: 150px;
+left: 10px;
+width: 260px;
+height: 707px;
+bottom: 100px;
+/* UI Properties */
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+z-index: 100;
+}
+
+// search bar
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+       body{
+        background-color:#eee;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+       }
+
+       .height{
+        // height: 50vh;
+        top: 40px;
+        left: 490px;
+        width: 800px;
+        height: 80px;
+        /* UI Properties */
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        opacity: 1;
+       }
+       
+
+       .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+         
+       }
+
+       .search input{
+
+        height: 80px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+
+
+       }
+
+
+       .search input:focus{
+
+        box-shadow: none;
+        border: 2px solid blue;
+
+
+       }
+
+       .search .fa-search{
+
+        position: absolute;
+        top: 20px;
+        left: 16px;
+
+       }
+
+       .search button{
+
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        background: blue;
+
+}
+.btn{
+
+left: 940px;
+width: 260px;
+height: 80px;
+/* UI Properties */
+background: var(--unnamed-color-88c2bb) 0% 0% no-repeat padding-box;
+background: #88C2BB 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  } */
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #eee; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa; 
+  }
+

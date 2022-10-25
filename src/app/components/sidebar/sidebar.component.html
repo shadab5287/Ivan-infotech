@@ -1,0 +1,86 @@
+<!-- <div class="logo">
+    <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+      <div class="logo-img">
+          <img src="./assets/img/angular2-logo-white.png"/>
+      </div>
+    </a>
+    <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        Creative Tim
+    </a>
+</div> -->
+<div class="sidebar-wrapper" style="border: transparent 2px;border-radius: 10px;height: 80vh;margin-top: 10px;">
+  <!-- <ul class="nav" >
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a [routerLink]="[menuItem.path]" >
+                <i class="now-ui-icons {{menuItem.icon}}" style="color: black;"></i>
+                <p style="color: black;">{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul> -->
+  <ul class="nav">
+    <li routerLinkActive="active" class="nav-item">
+      <a [routerLink]="['/home']">
+        <img src="assets/img/home.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title" style="color: black;padding-left: 10px;font-size: 16px;">Home</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a [routerLink]="['/my-account']">
+        <img src="assets/img/profile.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">My Account</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a >
+        <img src="assets/img/notification.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title" style="color: black;padding-left: 10px;font-size: 16px;">Notifications</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a [routerLink]="['/dashboard']">
+        <img src="assets/img/heart (3).svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Shop</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a >
+        <img src="assets/img/message.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Conversation</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a >
+        <img src="assets/img/message (2).svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Wallet</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item">
+      <a >
+        <img src="assets/img/favorite.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Subscription</span>
+      </a>
+    </li>
+   
+    <li routerLinkActive="active" class="nav-item">
+      <a >
+        <img src="assets/img/setting.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Settings</span>
+      </a>
+    </li>
+    <li routerLinkActive="active" class="nav-item" style="padding-top: 70px;">
+      <a [routerLink]="['/login']" (click)="logout()">
+        <img src="assets/img/logout.svg" alt="abcd" class="" style="color: black;padding-right: 7px;">
+        <!-- <i class="now-ui-icons business_badge" style="color: black;"></i> -->
+        <span class="side-nav__title"  style="color: black;padding-left: 10px;font-size: 16px;">Logout</span>
+      </a>
+    </li>
+  </ul>
+</div>
