@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
         }
     );
     otpForm = new FormGroup({
-        otp_code: new FormControl('', Validators.required),
+        otp_code: new FormControl('', [Validators.required]),
 
     });
 
@@ -110,6 +110,15 @@ export class SignupComponent implements OnInit {
                 })
                 // this.router.navigate(['/login'])
             }
+            if (res.status=="val_error") {
+                this.toastr.error("The OTP entered is invalid!!","",{
+                    closeButton:true,
+                    positionClass:'toast-top-left'
+                    
+                })
+                // this.router.navigate(['/login'])
+            }
+            
             
         })
     }

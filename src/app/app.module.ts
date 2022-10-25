@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -32,6 +34,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ToastrModule.forRoot(),
     // ToastrModule.forRoot(),
     NgxSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   declarations: [
     AppComponent,
