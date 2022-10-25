@@ -74,6 +74,17 @@ export class SignupComponent implements OnInit {
                     
                 })
             }
+            if (res.status=="error") {
+                // this.otptoken=res.data.token
+                console.log(this.otptoken,"otptoken");
+                this.spinner.hide()
+                // this.signUp=false
+                this.toastr.error("Please check email and try again","",{
+                    closeButton:true,
+                    positionClass:'toast-top-left'
+                    
+                })
+            }
 
         })
 

@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HomeComponent } from '../../home/home.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
+    HomeComponent
   ]
 })
 
